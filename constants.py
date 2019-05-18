@@ -1,8 +1,10 @@
 STORES = {
     "chipotle": "Eating Out",
     "trader joes": "Groceries",
+    "hannafords": "Groceries",
+    "amazon": "Groceries"
     "starbucks": "Eating Out",
-    "spotify": "Disgressionary",
+    "spotify": "Discretionary",
 }
 
 VENMOS = {

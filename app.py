@@ -36,7 +36,7 @@ def parse_email():
         sheet.add_expense(amount, description, category, method)
         
     elif "Large Withdrawal Alert for checking" in subject:
-        description = extract("(?<=-D )(.*)(?=-D)", body)
+        description = extract("(?<=22)(.*)(?=-D)", body)
         amount = extract("(?<=-)(.*)(?=Web)", body)
         category = assign_cat_card(description)
         method = "Jared Checking"

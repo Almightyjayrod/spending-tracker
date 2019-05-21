@@ -34,6 +34,15 @@ def parse_email():
         category = assign_cat_card(description)
         method = "Chase"
         sheet.add_expense(amount, description, category, method)
+        
+    elif "Large Withdrawal Alert for checking" in subject:
+        description = extract("(?<=-D )(.*)(?=-D)", body)
+        amount = extract("(?<=-)(.*)(?=Web)", body)
+        category = assign_cat_card(description)
+        method = "Jared Checking"
+        sheet.add_expense(amount, description, category, method)
+
+    return jsonify({"success": "true"})
 
     return jsonify({"success": "true"})
 

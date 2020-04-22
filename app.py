@@ -30,7 +30,8 @@ def parse_email():
 
     elif "Your Single Transaction Alert from Chase" in subject:
         description = extract("(?<= at )(.*)(?= has been authorized)", body)
-        amount = extract("(?<=charge\ of\ \(\$USD\) )(.*)(?=\ at)", body)
+        amount = extract("(?<=charge\ of\ \(\$USD\) )(.\d\D\d\d)(?<=\d)", body)
+        #amount = extract("(?<=charge\ of\ \(\$USD\) )(.*)(?=\ at)", body)
         category = assign_cat_card(description)
         method = "Chase"
         sheet.add_expense(amount, description, category, method)

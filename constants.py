@@ -8,7 +8,9 @@ STORES = {
     "AMZN Digital": "Entertainment",
     "6370": "Transfer",
     "7663": "Transfer",
-    
+    "WASHINGTON GENERAL": "Eating Out",
+    "Amazon.com":"Groceries",
+    "Prime Video": "Entertainment",
     
 }
 
